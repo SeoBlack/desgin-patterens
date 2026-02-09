@@ -1,0 +1,6 @@
+
+ Mon Feb 09 16:49:39 EET 2026: this content should be written to the custom_log.txt file
+ Mon Feb 09 16:50:20 EET 2026: this content should be written to the custom_log.txt file
+ Mon Feb 09 16:50:20 EET 2026: Simulation started
+ Mon Feb 09 16:50:20 EET 2026: Processing data...
+ Mon Feb 09 16:50:20 EET 2026: Simulation finished
