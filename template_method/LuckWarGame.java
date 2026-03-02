@@ -22,13 +22,14 @@ public class LuckWarGame extends GameClass {
     @Override
     public boolean endOfGame() {
         //check if all players died
-        this.gameOver = true;
+        int playersAlive = 0;
         for (Entity player : players) {
             if (!player.isDead()) { //if one player still alive
-                this.gameOver = false;
+                playersAlive++;
             }
         }
-        return gameOver;
+
+        return playersAlive == 1;
     }
     @Override
     public void playSingleTurn(int player) {
@@ -50,8 +51,9 @@ public class LuckWarGame extends GameClass {
         }
         Scanner input = new Scanner(System.in);
         int choice = input.nextInt();
-        while (choice < 0 || choice > this.players.length || choice == player) { //cant damage themselves
+        while (choice < 0 || choice > this.players.length || choice - 1 == player) { //cant damage themselves
             System.out.println("Please enter a number between 1 and " + (this.players.length));
+            choice = input.nextInt();
         }
         players[choice - 1].takeDamage(damage);
 
