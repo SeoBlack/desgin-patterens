@@ -7,6 +7,6 @@ public class XMLPrinter extends PrinterDecorator {
 
     @Override
     public void print(String message){
-        System.out.println("Child was overridden by other child");
+        printer.print("<message>" + message + "</message>" );
     }
 }
