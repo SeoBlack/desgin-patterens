@@ -22,4 +22,5 @@ public class Chian {
         chain.handleRequest(message2);
 
     }
+    //better way of building the chain
 }
